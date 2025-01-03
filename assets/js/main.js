@@ -266,7 +266,7 @@
 				toggleButton.addEventListener("click", (event) => {
 				  const bodyClassList = document.body.classList;
 				  if(bodyClassList.contains("dark-mode")) {
-					document.body.style.backgroundImage = "url('/images/background.png')";
+					document.body.style.backgroundImage = "url('../../images/background.png')";
 					bodyClassList.remove("dark-mode");
 				  } else {
 					document.body.style.backgroundImage = "none";
