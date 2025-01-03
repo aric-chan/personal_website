@@ -86,7 +86,7 @@ html {
   box-sizing: inherit; }
 
 body {
-  background-image: url('../../images/background.png');
+  background-image: url('https://aric-chan.github.io/personal_website/images/background.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
