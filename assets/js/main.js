@@ -279,9 +279,24 @@
 			const sidebar = document.getElementById('sidebar');
 			const toggleButton = document.querySelector('#sidebar .toggle');
 
+			  // Add scroll event listener
+				window.addEventListener("scroll", () => {
+					// Check if the sidebar is active
+					if (!sidebar.classList.contains("inactive")) {
+					// Add the 'inactive' class to hide the sidebar
+					sidebar.classList.add("inactive");
+					}
+				});
+
+				// Existing toggle button logic
+				toggleButton.addEventListener("click", () => {
+					// Toggle the 'inactive' class on sidebar
+					sidebar.classList.toggle("inactive");
+				});
+
 			// Add click event listener to the toggle button
 			toggleButton.addEventListener('click', () => {
-				console.log("inside js");
+
 				// Toggle the 'inactive' class on sidebar
 				sidebar.classList.toggle('inactive');
 				sidebar.classList.toggle('active');
