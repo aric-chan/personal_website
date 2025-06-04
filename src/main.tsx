@@ -6,8 +6,10 @@ import App from './App.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-      <Provider>
-          <App />
-      </Provider>
+          <Provider >
+              <div className="flex justify-center items-center min-h-screen w-screen ">
+              <App />
+              </div>
+          </Provider>
   </StrictMode>,
 )

@@ -1,27 +1,62 @@
-import { Button, Card, Image, Text } from "@chakra-ui/react"
+import { Button, Card, Image, Text, HStack } from "@chakra-ui/react"
+import { FaGithub, FaYoutube } from "react-icons/fa";
+import { Tag } from "@chakra-ui/react"
+import {Box} from "@chakra-ui/react";
+interface projectCardProps {
+    id: number
+    title: string;
+    description: string;
+    imageSrc: string;
+    githubButton?: boolean;
+    githubUrl?: string;
+    liveButton?: boolean;
+    liveUrl?: string;
+    demoButton?: boolean;
+    demoUrl?: string;
+    techStackList: string[];
+}
+const projectCard: React.FC<projectCardProps> = ({
+                                                     id,
+    title,
+    description,
+    imageSrc,
+    githubButton,
+    githubUrl,
+    liveButton,
+    liveUrl,
+    demoButton,
+    demoUrl,
+    techStackList
 
-function ProjectCard() {
+}) => {
     return (
-        <Card.Root maxW="sm" overflow="hidden">
-            <Image
-                src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-                alt="Green double couch with wooden legs"
-            />
-            <Card.Body gap="2">
-                <Card.Title>Living room Sofa</Card.Title>
-                <Card.Description>
-                    This sofa is perfect for modern tropical spaces, baroque inspired
-                    spaces.
-                </Card.Description>
-                <Text textStyle="2xl" fontWeight="medium" letterSpacing="tight" mt="2">
-                    $450
-                </Text>
-            </Card.Body>
-            <Card.Footer gap="2">
-                <Button variant="solid">Buy now</Button>
-                <Button variant="ghost">Add to cart</Button>
-            </Card.Footer>
+        <Card.Root maxW="xl" overflow="hidden" flexDirection="row" >
+            {id%2 == 0 &&<Image src={imageSrc} maxW="200px" objectFit="cover" />}
+            <Box>
+                <Card.Body gap="2">
+                    <Card.Title>{title}</Card.Title>
+                    <Card.Description>
+                        {description}
+                    </Card.Description>
+
+                    <HStack wrap="wrap" paddingTop = "20px">
+                        {techStackList.map((item,index) => (
+                                <Tag.Root maxW="none" display="inline-block">
+                                    <Tag.Label pt = "1px">{item}</Tag.Label>
+                                </Tag.Root>
+                            )
+                        )}
+                    </HStack>
+                </Card.Body>
+                <Card.Footer gap="2">
+                    {githubButton && (<Button variant="outline" as="a" href = {githubUrl} ><FaGithub /></Button>)}
+                    {liveButton && (<Button variant="outline" as="a" href = {liveUrl}><FaYoutube /></Button>)}
+                    {demoButton && (<Button variant="outline" as="a" href = {demoUrl}>Live Demo</Button>)}
+                </Card.Footer>
+            </Box>
+            {id%2 != 0 &&<Image src={imageSrc} maxW="200px" objectFit="cover" />}
         </Card.Root>
     )
+
 }
-export default ProjectCard;
+export default projectCard;
