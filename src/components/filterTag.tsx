@@ -47,9 +47,11 @@ const filterTag = () => {
         <HStack wrap="wrap" gap="6">
             {allTags.map(techStack => (
                     <Button
+
                         key = {techStack}
                         size="xs"
-                        colorPalette="cyan"
+                        colorScheme="teal"
+                        _hover={{ color: "white", background: "teal.700" }}
                         className="toggle-button"
                         onClick={(e) => {
                             handleClick(techStack);

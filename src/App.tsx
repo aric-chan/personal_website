@@ -1,14 +1,16 @@
+import {BrowserRouter, Route, Routes } from 'react-router-dom';
+import Layout from '@/components/Layout';
+import FilterTag from '@/components/filterTag';
 
-import {Box, Button, Stack, Tag} from "@chakra-ui/react"
-import ProjectCard from "@/components/projectCard.tsx";
-import {projectArray} from "@/assets/data/projectArray.ts";
-import FilterTag from "@/components/filterTag.tsx";
 
 export default function App() {
     return (
-
-
-        <FilterTag/>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Layout />}/>
+                    <Route path="projects" element={<FilterTag />} />
+            </Routes>
+        </BrowserRouter>
 
 
     );
