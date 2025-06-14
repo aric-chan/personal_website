@@ -4,45 +4,30 @@ import {Button, HStack} from "@chakra-ui/react";
 import ProjectCard from "@/components/projectCard.tsx";
 
 const filterTag = () => {
-    const allTags = [... new Set(projectArray.flatMap(item => item.techStackList))]
-
-    const [selectedTag, setSelectedTag] = useState([]);
     const [filteredProjectArray, setFilteredProjectArray] = useState(projectArray);
-    // const [isClicked, setIsClicked] = useState(false);
-    const handleClick = (tag:string) => {
-        let newSelectedTag: string[];
-        if (selectedTag.includes(tag)) {
-            newSelectedTag = selectedTag.filter(t => t !== tag);
-        } else {
-            newSelectedTag = [...selectedTag, tag];
-        }
-        setSelectedTag(newSelectedTag);
-        console.log('Updated selectedTag:', newSelectedTag);
+    const [selectedTags, setSelectedTags] = useState([]);
 
+
+    const handleClick = (tag) => {
+        if (selectedTags.includes(tag)) {
+            setSelectedTags(selectedTags.filter(t => t!== tag));
+        } else {
+            setSelectedTags([...selectedTags,tag])
+        }
     }
-    // useEffect(() => {
-    //     filteredProjectArray = projectArray
-    // }, []);
-    //
-    // const filteredProjectArray = projectArray.filter(
-    //     proj => proj.techStackList.some(
-    //         techStack => selectedTag.includes(techStack)))
-
     useEffect(() => {
-        let newFilteredProjectArray;
-        if (selectedTag.length > 0) {
-            newFilteredProjectArray = projectArray.filter(
-                proj => proj.techStackList.some(
-                    techStack => selectedTag.includes(techStack)))
-        } else {
-            newFilteredProjectArray = projectArray;
+        let newFilterProjectArray;
+        if (selectedTags.length > 0) {
+            newFilterProjectArray = projectArray.filter(
+                proj=> proj.techStackList.some(
+                    tStack => selectedTags.includes(tStack))
+            )} else {
+            newFilterProjectArray = projectArray
         }
-        setFilteredProjectArray(newFilteredProjectArray)
-
-    }, [selectedTag]);
-    console.log('Filtered projects:', filteredProjectArray);
-
-
+        setFilteredProjectArray(newFilterProjectArray);
+    }, [selectedTags]);
+    //unquie tag array
+    const allTags = [... new Set(projectArray.flatMap(project => project.techStackList))]
     return (
         <HStack wrap="wrap" gap="6">
             {allTags.map(techStack => (
@@ -51,9 +36,7 @@ const filterTag = () => {
                         size="xs"
                         colorPalette="cyan"
                         className="toggle-button"
-                        onClick={(e) => {
-                            handleClick(techStack);
-                        }}
+                        onClick={()=>handleClick(techStack)}
                         >
                         {techStack}
                     </Button>
