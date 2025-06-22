@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {projectArray} from "@/assets/data/projectArray.ts";
-import {Button, HStack} from "@chakra-ui/react";
+import {Button, HStack, VStack} from "@chakra-ui/react";
 import ProjectCard from "@/components/projectCard.tsx";
 
 const filterTag = () => {
@@ -44,6 +44,7 @@ const filterTag = () => {
                     </Button>
                 )
                 )}
+            <VStack wrap="wrap" gap="6">
             {filteredProjectArray.map((item,index) => (
                     <ProjectCard
                         key = {item.id}
@@ -61,7 +62,8 @@ const filterTag = () => {
                     />
                 )
             )}
-        </HStack>
+        </VStack>
+            </HStack>
 
     );
 };
