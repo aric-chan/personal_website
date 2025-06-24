@@ -2,6 +2,7 @@ import { Button, Card, Image, Text, HStack } from "@chakra-ui/react"
 import { FaGithub, FaYoutube } from "react-icons/fa";
 import { Tag } from "@chakra-ui/react"
 import {Box} from "@chakra-ui/react";
+
 interface projectCardProps {
     id: number
     title: string;
@@ -26,12 +27,13 @@ const projectCard: React.FC<projectCardProps> = ({
     liveUrl,
     demoButton,
     demoUrl,
-    techStackList
+    techStackList,
 
 }) => {
     return (
-        <Card.Root maxW="xl" overflow="hidden" flexDirection="row" >
-            {id%2 == 0 &&<Image src={imageSrc} maxW="200px" objectFit="cover" />}
+        <Card.Root maxW="xl" overflow="hidden" flexDirection="row"  _hover={{transform: "scale(1.05)" }}
+                   transition="color 0.3s, transform 0.3s">
+            {id%2 == 0 &&<Image pointerEvents="none" src={imageSrc} maxW="200px" objectFit="cover" />}
             <Box>
                 <Card.Body gap="2">
                     <Card.Title>{title}</Card.Title>
@@ -49,12 +51,12 @@ const projectCard: React.FC<projectCardProps> = ({
                     </HStack>
                 </Card.Body>
                 <Card.Footer gap="2">
-                    {githubButton && (<Button variant="outline" as="a" href = {githubUrl} ><FaGithub /></Button>)}
-                    {liveButton && (<Button variant="outline" as="a" href = {liveUrl}><FaYoutube /></Button>)}
-                    {demoButton && (<Button variant="outline" as="a" href = {demoUrl}>Live Demo</Button>)}
+                    {githubButton && (<Button size = "xs" variant="outline" as="a" href = {githubUrl} ><FaGithub /></Button>)}
+                    {liveButton && (<Button size = "xs" variant="outline" as="a" href = {liveUrl}><FaYoutube /></Button>)}
+                    {demoButton && (<Button size = "xs" variant="outline" as="a" href = {demoUrl}>Live Demo</Button>)}
                 </Card.Footer>
             </Box>
-            {id%2 != 0 &&<Image src={imageSrc} maxW="200px" objectFit="cover" />}
+            {id%2 != 0 &&<Image pointerEvents="none" src={imageSrc} maxW="200px" objectFit="cover" />}
         </Card.Root>
     )
 

@@ -1,14 +1,13 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {projectArray} from "@/assets/data/projectArray.ts";
-import {Button, HStack, VStack} from "@chakra-ui/react";
-import ProjectCard from "@/components/projectCard.tsx";
+import {Box, Button, Flex, HStack, VStack} from "@chakra-ui/react";
+import ProjectCard from "@/components/ProjectCard.tsx";
 
 const filterTag = () => {
     const [filteredProjectArray, setFilteredProjectArray] = useState(projectArray);
     const [selectedTags, setSelectedTags] = useState([]);
 
-
-    const handleClick = (tag) => {
+    const selectTagArrayHandler = (tag) => {
         if (selectedTags.includes(tag)) {
             setSelectedTags(selectedTags.filter(t => t!== tag));
         } else {
@@ -29,21 +28,30 @@ const filterTag = () => {
     //unquie tag array
     const allTags = [... new Set(projectArray.flatMap(project => project.techStackList))]
     return (
-        <HStack wrap="wrap" gap="6">
-            {allTags.map(techStack => (
-                    <Button
-
-                        key = {techStack}
-                        size="xs"
-                        colorScheme="teal"
-                        _hover={{ color: "white", background: "teal.700" }}
-                        className="toggle-button"
-                        onClick={()=>handleClick(techStack)}
+        <Box
+            position="relative"
+            overflow="auto"
+            display="flex"
+            alignItems="center"
+            justifyContent="center" // Center the card initially
+        >
+        <VStack justify="center" wrap="wrap" gap="6">
+            <Flex bg = "gray.300" width="1/2" wrap="wrap" gap="2" justify="center" rounded="md">
+                {allTags.map(techStack => (
+                        <Button
+                            bg = {selectedTags.includes(techStack)?"gray.700" : ""}
+                            key = {techStack}
+                            size="2xs"
+                            colorScheme="teal"
+                            _hover={{background: "teal.200" }}
+                            onClick={()=> {selectTagArrayHandler(techStack)}}
                         >
-                        {techStack}
-                    </Button>
-                )
+                            {techStack}
+                        </Button>
+                    )
                 )}
+            </Flex>
+
             <VStack wrap="wrap" gap="6">
             {filteredProjectArray.map((item,index) => (
                     <ProjectCard
@@ -59,11 +67,13 @@ const filterTag = () => {
                         demoButton={item.demoButton}
                         demoUrl={item.demoUrl}
                         techStackList={item.techStackList}
+                        constraintsRef={null}
                     />
                 )
             )}
         </VStack>
-            </HStack>
+            </VStack>
+            </Box>
 
     );
 };
