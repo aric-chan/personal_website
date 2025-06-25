@@ -8,6 +8,7 @@ import GadgetsTab from "@/components/GadgetsTab.tsx";
 import {SlideShow} from "@/components/SlideShow.tsx";
 import MoreTab from "@/components/MoreTab.tsx";
 import Aurora from './components/ui/Aurora';
+import HomeTab from "@/components/HomeTab.tsx";
 
 export default function App() {
     return (
@@ -26,7 +27,7 @@ export default function App() {
                         colorStops={["#5227ff", "#7cff67", "#5227ff"]}
                         blend={1}
                         amplitude={0.3}
-                        speed={0.2}
+                        speed={0.4}
                     />
                 </Box>
             <VStack>
@@ -36,14 +37,14 @@ export default function App() {
                     zIndex={999}
                     width="100%"
                     textAlign="center"
-                    p={5} // Optional: add some padding
+                    p={5}
+                    bg="transparent"
                 >
                     <HeaderTab/>
                 </Box>
-                <Box p={10}>
-                </Box>
+                <Box p={10}></Box>
                 <Routes>
-                    <Route path="/" element={<SlideShow/>}/>
+                    <Route path="/" element={<HomeTab/>}/>
                     <Route path="projects" element={<FilterTag/>}/>
                     <Route path="gadgets" element={<GadgetsTab/>}/>
                     <Route path="more" element={<MoreTab/>}/>

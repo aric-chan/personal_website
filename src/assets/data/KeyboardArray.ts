@@ -13,7 +13,7 @@ import lucky65 from "../../../public/equipmentImages/lucky65v2.jpg";
 export const KeyboardArray : Equipment[]  = [
     {
         id: 0,
-        title: "Cherry MX Silent Black Switches",
+        title: "Cherry MX Silent Black",
         imageSrc: switches,
         shopUrl:"https://www.cherry.de/en-gb/product/mx2a-silent-black",
 

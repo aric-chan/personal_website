@@ -35,7 +35,7 @@ const projectCard: React.FC<projectCardProps> = ({
                    transition="color 0.3s, transform 0.3s">
             {id%2 == 0 &&<Image pointerEvents="none" src={imageSrc} maxW="200px" objectFit="cover" />}
             <Box>
-                <Card.Body gap="2">
+                <Card.Body bg = "gray.700/40" gap="2">
                     <Card.Title>{title}</Card.Title>
                     <Card.Description>
                         {description}
@@ -50,10 +50,13 @@ const projectCard: React.FC<projectCardProps> = ({
                         )}
                     </HStack>
                 </Card.Body>
-                <Card.Footer gap="2">
-                    {githubButton && (<Button size = "xs" variant="outline" as="a" href = {githubUrl} ><FaGithub /></Button>)}
-                    {liveButton && (<Button size = "xs" variant="outline" as="a" href = {liveUrl}><FaYoutube /></Button>)}
-                    {demoButton && (<Button size = "xs" variant="outline" as="a" href = {demoUrl}>Live Demo</Button>)}
+                <Card.Footer bg = "gray.700/40" gap="2">
+                    {githubButton && (<Button target="_blank"
+                                              rel="noopener noreferrer" _hover={{transform: "scale(1.1)" }} bg = "gray.900" size = "xs" variant="outline" as="a" href = {githubUrl} ><FaGithub /></Button>)}
+                    {liveButton && (<Button  target="_blank"
+                                             rel="noopener noreferrer" _hover={{transform: "scale(1.1)" }} bg = "gray.900"  size = "xs" variant="outline" as="a" href = {liveUrl}><FaYoutube /></Button>)}
+                    {demoButton && (<Button target="_blank"
+                                            rel="noopener noreferrer"  _hover={{transform: "scale(1.1)" }} bg = "gray.900"  size = "xs" variant="outline" as="a" href = {demoUrl}>Live Demo</Button>)}
                 </Card.Footer>
             </Box>
             {id%2 != 0 &&<Image pointerEvents="none" src={imageSrc} maxW="200px" objectFit="cover" />}

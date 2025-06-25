@@ -1,7 +1,8 @@
 import React, {useEffect, useRef, useState} from 'react';
-import {projectArray} from "@/assets/data/projectArray.ts";
+import {projectArray} from "@/assets/data/ProjectArray.ts";
 import {Box, Button, Flex, HStack, VStack} from "@chakra-ui/react";
 import ProjectCard from "@/components/ProjectCard.tsx";
+import { motion } from 'framer-motion';
 
 const filterTag = () => {
     const [filteredProjectArray, setFilteredProjectArray] = useState(projectArray);
@@ -28,28 +29,36 @@ const filterTag = () => {
     //unquie tag array
     const allTags = [... new Set(projectArray.flatMap(project => project.techStackList))]
     return (
-        <Box
+        <motion.div
+            initial={{ x: 0, y: 0, opacity: 0.1 }}
+            whileInView={{ opacity: 1 }}
+        >
+            <Box
             position="relative"
-            overflow="auto"
             display="flex"
             alignItems="center"
-            justifyContent="center" // Center the card initially
+            justifyContent="center"
         >
         <VStack justify="center" wrap="wrap" gap="6">
-            <Flex bg = "gray.300" width="1/2" wrap="wrap" gap="2" justify="center" rounded="md">
+
+            <Flex p = {5} bg = "gray.300/20" width="1/2" wrap="wrap" gap="2" justify="center" rounded="md">
+
                 {allTags.map(techStack => (
                         <Button
-                            bg = {selectedTags.includes(techStack)?"gray.700" : ""}
+                            bg = {selectedTags.includes(techStack)?"gray.500" : ""}
                             key = {techStack}
                             size="2xs"
                             colorScheme="teal"
-                            _hover={{background: "teal.200" }}
+                            _hover={{background: "cyan.600" }}
                             onClick={()=> {selectTagArrayHandler(techStack)}}
                         >
-                            {techStack}
+                            <Box color={selectedTags.includes(techStack)?"gray.100" : "gray.950"}>
+                                {techStack}
+                            </Box>
                         </Button>
                     )
                 )}
+
             </Flex>
 
             <VStack wrap="wrap" gap="6">
@@ -74,7 +83,7 @@ const filterTag = () => {
         </VStack>
             </VStack>
             </Box>
-
+        </motion.div>
     );
 };
 

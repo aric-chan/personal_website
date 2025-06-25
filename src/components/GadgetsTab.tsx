@@ -13,12 +13,9 @@ import ShinyText from './ui/ShinyText';
 const GadgetsTab = () => {
     const constraintsRef = useRef(null);
     return (
-
-
         <Box
             ref={constraintsRef}
             position="relative"
-            overflow="auto"
             display="flex"
             alignItems="center"
             justifyContent="center" // Center the card initially
@@ -55,7 +52,7 @@ const GadgetsTab = () => {
                             constraintsRef={constraintsRef}/>
                     ))}
                 </Grid>
-
+                <Box p={4}></Box>
                 <ShinyText
                     className="!text-5xl !font-bold !leading-snug"
                     text="Keyboards"
@@ -73,7 +70,7 @@ const GadgetsTab = () => {
 
                     ))}
                 </Grid>
-
+                <Box p={4}></Box>
                 <ShinyText
                     className="!text-5xl !font-bold !leading-snug"
                     text="Coffee"

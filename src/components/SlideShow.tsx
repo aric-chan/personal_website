@@ -6,31 +6,8 @@ import {
     AnimatePresence
 } from "framer-motion";
 
-import coffeepot from "../../public/equipmentImages/coffeepot.jpg";
-import hariov60 from "../../public/equipmentImages/hariov60.jpg";
-import kalitawave from "../../public/equipmentImages/kalitawave.jpg";
-import origami from "../../public/equipmentImages/origamidripper.jpg";
+import ChiMaImages from "../assets/data/ChimaArray.ts"
 
-
-// Sample images for the cards
-const sampleImages = [
-    {
-        src: origami, // Corrected: Use imported image directly
-        alt: "Origami Dripper"
-    },
-    {
-        src: coffeepot,
-        alt: "Coffee Pot"
-    },
-    {
-        src: hariov60,
-        alt: "Hario V60"
-    },
-    {
-        src: kalitawave,
-        alt: "Kalita Wave"
-    }
-];
 function Card(props) {
     const [exitX, setExitX] = useState(0);
 
@@ -66,13 +43,13 @@ function Card(props) {
     }
 
     // Select image based on index
-    const image = sampleImages[props.index % sampleImages.length];
+    const image = ChiMaImages[props.index % ChiMaImages.length];
 
     return (
         <motion.div
             style={{
-                width: 150,
-                height: 150,
+                width: 200,
+                height: 200,
                 position: "absolute",
                 top: 0,
                 x,
@@ -100,9 +77,9 @@ function Card(props) {
                 src={image.src}
                 alt={image.alt}
                 style={{
-                    width: 120,
-                    height: 120,
-                    borderRadius: 30,
+                    width: 160,
+                    height: 160,
+                    borderRadius: 20,
                     scale,
                     pointerEvents: "none",
                     objectFit: "cover"
@@ -116,7 +93,7 @@ export function SlideShow() {
     const [index, setIndex] = useState(0);
 
     return (
-        <motion.div style={{ width: 150, height: 150, position: "relative" }}>
+        <motion.div style={{ width: 200, height: 200, position: "relative" }}>
             <AnimatePresence initial={false}>
                 <Card
                     key={index + 2}

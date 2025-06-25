@@ -3,12 +3,13 @@ import { IoDocumentTextOutline, IoMailOutline, IoLogoLinkedin, IoHome } from "re
 const footer = () => {
 
     return (
-        <Box >
+        <Box p={4}>
             <Flex justify="center" gap={6}>
                 <Link href="/" >
                 <IconButton
+                            size = "xs"
                             rounded="full"
-                            bg={{ base: "red.200", _hover: { base: "red.400" } }}
+                            bg={{ base: "teal.100", _hover: { base: "teal.400" } }}
                             _hover={{transform: "scale(1.1)" }}
                             transition="color 0.3s, transform 0.3s">
                     <IoHome/>
@@ -16,15 +17,17 @@ const footer = () => {
                 </Link>
                 <Link href="../../public/chan_aric_edbert_resume.pdf" target="_blank"
                       rel="noopener noreferrer">
-                    <IconButton rounded="full"
-                                bg={{ base: "red.200", _hover: { base: "red.400" } }}
+                    <IconButton size = "xs"
+                                rounded="full"
+                                bg={{ base: "teal.100", _hover: { base: "teal.400" } }}
                                 _hover={{transform: "scale(1.1)" }}
                                 transition="color 0.3s, transform 0.3s">
                         <IoDocumentTextOutline/>
                     </IconButton>
                 </Link>
                 <Link href="mailto:aricchan918@gmail.com" >
-                <IconButton rounded="full"  bg={{ base: "red.200", _hover: { base: "red.400" } }}
+                <IconButton size = "xs"
+                            rounded="full"  bg={{ base: "teal.100", _hover: { base: "teal.400" } }}
                             _hover={{transform: "scale(1.1)" }}
                             transition="color 0.3s, transform 0.3s">
                     <IoMailOutline />
@@ -32,14 +35,16 @@ const footer = () => {
                     </Link>
                 <Link href="https://www.linkedin.com/in/aric-edbert-chan-041b99136/" target="_blank"
                       rel="noopener noreferrer">
-                <IconButton rounded="full" bg={{ base: "red.200", _hover: { base: "red.400" } }}
+                <IconButton size = "xs"
+                            rounded="full" bg={{ base: "teal.100", _hover: { base: "teal.400" } }}
                             _hover={{transform: "scale(1.1)" }}
                             transition="color 0.3s, transform 0.3s">
                     <IoLogoLinkedin />
                 </IconButton>
                     </Link>
             </Flex>
-            <p> © 2025 Aric Chan. All rights reserved.</p>
+            <Box p={2}></Box>
+            <p className = "!text-xs"> © 2025 Aric Chan. All rights reserved.</p>
         </Box>
 
     )

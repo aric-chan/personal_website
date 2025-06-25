@@ -21,7 +21,7 @@ export const CoffeeArray : Equipment[]  = [
     },
     {
         id: 1,
-        title: "Tsukiusagi Enamel Dripper",
+        title: "Tsukiusagi Enamel Pot",
         imageSrc:coffeepot,
         shopUrl:"https://www.amazon.ca/Tsuki-Usagi-Slim-Pot-23-7/dp/B0007CM3CE",
     },

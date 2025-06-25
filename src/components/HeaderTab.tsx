@@ -38,7 +38,7 @@ const HeaderTab = () => {
             }
                        variant="plain">
                 <Tabs.List
-                    bg="gray.800"
+                    bg="gray.950/80"
                     rounded="l3"
                     p="1"
                 >
