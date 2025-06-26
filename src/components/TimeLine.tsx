@@ -1,7 +1,8 @@
-import { Text, Timeline } from "@chakra-ui/react"
+import { Icon, Text, Timeline } from "@chakra-ui/react"
 import {LuCheck, LuPackage, LuSchool, LuShip} from "react-icons/lu"
 import {EventArray} from "@/assets/data/EventArray.ts";
 import type {IconType} from "react-icons";
+import {Fade} from "react-awesome-reveal";
 interface EventProps {
     date: string;
     icon: IconType; // Store the component type, not the rendered element
@@ -11,18 +12,21 @@ interface EventProps {
 const Event = ({event}: {event:EventProps}) => {
     const IconComponent = event.icon;
     return (
-            <Timeline.Item>
+            <Timeline.Item _hover={{transform: "scale(1.05)" }}
+                           transition="transform 0.3s">
                 <Timeline.Content width="160px">
                     <Timeline.Title>{event.date}</Timeline.Title>
                 </Timeline.Content>
                 <Timeline.Connector>
-                    <Timeline.Separator />
-                    <Timeline.Indicator>
-                        <IconComponent/>
+                    <Timeline.Separator borderColor="teal.400"/>
+                    <Timeline.Indicator outline="none">
+                        <Icon>
+                            <IconComponent/>
+                        </Icon>
                     </Timeline.Indicator>
                 </Timeline.Connector>
                 <Timeline.Content>
-                    <Timeline.Title>{event.title}</Timeline.Title>
+                    <Timeline.Title fontWeight="semibold">{event.title}</Timeline.Title>
                     <Timeline.Description >{event.description}</Timeline.Description>
                 </Timeline.Content>
             </Timeline.Item>
@@ -31,12 +35,15 @@ const Event = ({event}: {event:EventProps}) => {
 
 const TimeLine = () => {
     return (
-        <Timeline.Root justifyContent="center" maxW="500px">
-            {EventArray.map((item,index) =>
-                <Event key = {index}
-                       event = {item}
-                       />
+        <Fade>
+            <Timeline.Root maxWidth = "500px">
+                {EventArray.map((item,index) =>
+                    <Event key = {index}
+                           event = {item}
+                    />
                 )}
-        </Timeline.Root>
+            </Timeline.Root>
+        </Fade>
+
     )}
 export default TimeLine;

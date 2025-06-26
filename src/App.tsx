@@ -9,8 +9,10 @@ import {SlideShow} from "@/components/SlideShow.tsx";
 import MoreTab from "@/components/MoreTab.tsx";
 import Aurora from './components/ui/Aurora';
 import HomeTab from "@/components/HomeTab.tsx";
+import {useRef} from "react";
 
 export default function App() {
+    const constraintsRef = useRef(null);
     return (
         <>
             <BrowserRouter>
@@ -22,6 +24,7 @@ export default function App() {
                     height="100vh"
                     zIndex={-1} // Put it behind other content
                     overflow="hidden"
+
                 >
                     <Aurora
                         colorStops={["#5227ff", "#7cff67", "#5227ff"]}

@@ -48,8 +48,8 @@ function Card(props) {
     return (
         <motion.div
             style={{
-                width: 200,
-                height: 200,
+                width: 280,
+                height: 280,
                 position: "absolute",
                 top: 0,
                 x,
@@ -77,8 +77,8 @@ function Card(props) {
                 src={image.src}
                 alt={image.alt}
                 style={{
-                    width: 160,
-                    height: 160,
+                    width: 220,
+                    height: 220,
                     borderRadius: 20,
                     scale,
                     pointerEvents: "none",

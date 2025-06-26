@@ -32,7 +32,7 @@ const projectCard: React.FC<projectCardProps> = ({
 }) => {
     return (
         <Card.Root maxW="xl" overflow="hidden" flexDirection="row"  _hover={{transform: "scale(1.05)" }}
-                   transition="color 0.3s, transform 0.3s">
+                   transition="transform 0.3s">
             {id%2 == 0 &&<Image pointerEvents="none" src={imageSrc} maxW="200px" objectFit="cover" />}
             <Box>
                 <Card.Body bg = "gray.700/40" gap="2">

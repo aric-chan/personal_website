@@ -8,11 +8,13 @@ import { Grid, GridItem } from "@chakra-ui/react"
 import {useRef} from "react";
 import SplitText from "./ui/SplitText";
 import ShinyText from './ui/ShinyText';
+import { Fade } from "react-awesome-reveal";
 
 
 const GadgetsTab = () => {
     const constraintsRef = useRef(null);
     return (
+
         <Box
             ref={constraintsRef}
             position="relative"
@@ -22,18 +24,7 @@ const GadgetsTab = () => {
         >
 
             <VStack w="100vw">
-
-                    <SplitText
-                        className="!text-5xl !font-bold !leading-snug"
-                        text="Welcome to my garage :)"
-                        delay={100}
-                        duration={0.6}
-                        ease="power3.out"
-                        splitType="chars"
-                        from={{ opacity: 0, y: 40 }}
-                        to={{ opacity: 1, y: 0 }}
-                        threshold={0.1}
-                    />
+                <Fade>
 
                 <ShinyText
                     className="!text-5xl !font-bold !leading-snug"
@@ -88,9 +79,10 @@ const GadgetsTab = () => {
 
                     ))}
                 </Grid>
-
+                </Fade>
             </VStack>
-        </Box>);
+        </Box>
+    );
 
 };
 
