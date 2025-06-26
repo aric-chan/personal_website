@@ -1,10 +1,6 @@
 import ShinyText from "@/components/ui/ShinyText.tsx";
-import {Box, Grid, VStack} from "@chakra-ui/react";
 import {Fade} from "react-awesome-reveal";
-import {PcArray} from "@/assets/data/PcArray.ts";
-import EquipCard from "@/components/EquipCard.tsx";
-import {KeyboardArray} from "@/assets/data/KeyboardArray.ts";
-import {CoffeeArray} from "@/assets/data/CoffeeArray.ts";
+
 
 
 

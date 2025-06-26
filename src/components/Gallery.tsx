@@ -1,9 +1,8 @@
 // Gallery.tsx
 import {Box, Image} from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import type {RefObject} from "react";
 interface GalleryProps {
-    constraintsRef:RefObject<HTMLImageElement>;
+    constraintsRef: React.RefObject<HTMLDivElement | null>;
     rotate: number;
     translate: string;
     title:string;

@@ -1,8 +1,9 @@
-import { Icon, Text, Timeline } from "@chakra-ui/react"
-import {LuCheck, LuPackage, LuSchool, LuShip} from "react-icons/lu"
+import {Fade} from "react-awesome-reveal";
 import {EventArray} from "@/assets/data/EventArray.ts";
 import type {IconType} from "react-icons";
-import {Fade} from "react-awesome-reveal";
+import { Icon, Timeline } from "@chakra-ui/react"
+
+
 interface EventProps {
     date: string;
     icon: IconType; // Store the component type, not the rendered element

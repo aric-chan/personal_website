@@ -7,9 +7,9 @@ import { Fade } from 'react-awesome-reveal';
 
 const filterTag = () => {
     const [filteredProjectArray, setFilteredProjectArray] = useState(projectArray);
-    const [selectedTags, setSelectedTags] = useState([]);
+    const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
-    const selectTagArrayHandler = (tag) => {
+    const selectTagArrayHandler = (tag: string) => {
         if (selectedTags.includes(tag)) {
             setSelectedTags(selectedTags.filter(t => t!== tag));
         } else {

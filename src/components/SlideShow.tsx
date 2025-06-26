@@ -8,7 +8,14 @@ import {
 
 import ChiMaImages from "../assets/data/ChimaArray.ts"
 
-function Card(props) {
+interface CardProps {
+    index: number;
+    setIndex: (index: number) => void;
+    frontCard?: boolean;
+    drag?: string;
+}
+
+function Card(props: CardProps) {
     const [exitX, setExitX] = useState(0);
 
     const x = useMotionValue(0);
@@ -19,7 +26,7 @@ function Card(props) {
 
     const variantsFrontCard = {
         animate: { scale: 1, y: 0, opacity: 1 },
-        exit: (custom) => ({
+        exit: (custom: number) => ({
             x: custom,
             opacity: 0,
             scale: 0.5,
@@ -30,8 +37,8 @@ function Card(props) {
         initial: { scale: 0, y: 105, opacity: 0 },
         animate: { scale: 0.75, y: 30, opacity: 0.5 }
     };
-
-    function handleDragEnd(_:any, info) {
+//@ts-ignore
+    function handleDragEnd(_, info: { offset: { x: number } }) {
         if (info.offset.x < -100) {
             setExitX(-250);
             props.setIndex(props.index + 1);
@@ -58,7 +65,7 @@ function Card(props) {
             }}
             whileTap={{ cursor: "grabbing" }}
             // Dragging
-            drag={props.drag}
+            drag={props.drag as false | "x" | "y" | undefined}
             dragConstraints={{ top: 0, right: 0, bottom: 0, left: 0 }}
             onDragEnd={handleDragEnd}
             // Animation
@@ -73,7 +80,9 @@ function Card(props) {
                     : { scale: { duration: 0.2 }, opacity: { duration: 0.4 } }
             }
         >
+
             <motion.img
+                // @ts-ignore
                 src={image.src}
                 alt={image.alt}
                 style={{

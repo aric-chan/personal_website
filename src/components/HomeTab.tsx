@@ -1,14 +1,14 @@
 import {SlideShow} from "@/components/SlideShow.tsx";
 import Timeline from "@/components/TimeLine";
 import SplitText from "@/components/ui/SplitText.tsx";
-import {useRef} from "react";
+import { useRef } from "react";
 import {Box, Flex, HStack, VStack} from "@chakra-ui/react";
 import {GalleryArray} from "@/assets/data/GalleryArray.ts";
 import Gallery from "@/components/Gallery.tsx";
 import {Fade} from "react-awesome-reveal";
 
 const HomeTab = () => {
-    const constraintsRef = useRef(null);
+    const constraintsRef = useRef<HTMLDivElement>(null);
     return (
 
         <Box
@@ -23,7 +23,6 @@ const HomeTab = () => {
                     {GalleryArray.map((item) => (
                         <Gallery
                             key={item.id}
-                            id={item.id}
                             title={item.title}
                             description={item.description}
                             imageSrc={item.imageSrc}
