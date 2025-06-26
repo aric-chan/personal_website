@@ -1,7 +1,7 @@
-import macmini from "../../../public/equipmentImages/macmini.jpg";
-import macbookair from "../../../public/equipmentImages/macbookair.jpg";
-import monitor from "../../../public/equipmentImages/monitor.jpg";
-import mouse from "../../../public/equipmentImages/mouse.jpg";
+import macmini from "@/assets/equipmentImages/macmini.jpg";
+import macbookair from "@/assets/equipmentImages/macbookair.jpg";
+import monitor from "@/assets/equipmentImages/monitor.jpg";
+import mouse from "@/assets/equipmentImages/mouse.jpg";
  interface Equipment {
      id: number
      title: string;

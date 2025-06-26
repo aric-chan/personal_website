@@ -1,7 +1,7 @@
-import medicImage from "../../../public/projectImages/medic.jpg";
-import coffeeImage from "../../../public/projectImages/coffee.jpg";
-import bankImage from "../../../public/projectImages/bank.jpg";
-import ootdImage from "../../../public/projectImages/ootd.jpg";
+import medicImage from "@/assets/projectImages/medic.jpg";
+import coffeeImage from "@/assets/projectImages/coffee.jpg";
+import bankImage from "@/assets/projectImages/bank.jpg";
+import ootdImage from "@/assets/projectImages/ootd.jpg";
  interface Project {
     id: number
     title: string;

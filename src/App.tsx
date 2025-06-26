@@ -2,17 +2,13 @@ import {BrowserRouter, Route, Routes } from 'react-router-dom';
 import HeaderTab from '@/components/HeaderTab.tsx';
 import Footer from '@/components/Footer.tsx';
 import FilterTag from '@/components/FilterTag.tsx';
-import EquipCard from '@/components/EquipCard.tsx';
 import {Box, VStack} from "@chakra-ui/react";
 import GadgetsTab from "@/components/GadgetsTab.tsx";
-import {SlideShow} from "@/components/SlideShow.tsx";
 import MoreTab from "@/components/MoreTab.tsx";
 import Aurora from './components/ui/Aurora';
 import HomeTab from "@/components/HomeTab.tsx";
-import {useRef} from "react";
 
 export default function App() {
-    const constraintsRef = useRef(null);
     return (
         <>
             <BrowserRouter>

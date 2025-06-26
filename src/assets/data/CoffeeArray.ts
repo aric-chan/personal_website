@@ -1,8 +1,8 @@
-import coffeegrinder from "../../../public/equipmentImages/coffeegrinder.jpg";
-import coffeepot from "../../../public/equipmentImages/coffeepot.jpg";
-import hariov60 from "../../../public/equipmentImages/hariov60.jpg";
-import kalitawave from "../../../public/equipmentImages/kalitawave.jpg";
-import origami from "../../../public/equipmentImages/origamidripper.jpg";
+import coffeegrinder from "@/assets/equipmentImages/coffeegrinder.jpg";
+import coffeepot from "@/assets/equipmentImages/coffeepot.jpg";
+import hariov60 from "@/assets/equipmentImages/hariov60.jpg";
+import kalitawave from "@/assets/equipmentImages/kalitawave.jpg";
+import origami from "@/assets/equipmentImages/origamidripper.jpg";
  interface Equipment {
     id: number
     title: string;

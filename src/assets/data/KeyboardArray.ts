@@ -1,7 +1,7 @@
-import switches from "../../../public/equipmentImages/cherryblack.jpg";
-import keycaps from "../../../public/equipmentImages/keycaps.jpg";
-import leopold from "../../../public/equipmentImages/leopold660c.jpg";
-import lucky65 from "../../../public/equipmentImages/lucky65v2.jpg";
+import switches from "@/assets/equipmentImages/cherryblack.jpg";
+import keycaps from "@/assets/equipmentImages/keycaps.jpg";
+import leopold from "@/assets/equipmentImages/leopold660c.jpg";
+import lucky65 from "@/assets/equipmentImages/lucky65v2.jpg";
  interface Equipment {
      id: number
      title: string;

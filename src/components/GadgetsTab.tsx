@@ -3,10 +3,9 @@ import { CoffeeArray } from "@/assets/data/CoffeeArray.ts";
 import { PcArray } from "@/assets/data/PcArray.ts";
 import { KeyboardArray } from "@/assets/data/KeyboardArray.ts";
 import EquipCard from "@/components/EquipCard.tsx";
-import {Box, Text, VStack} from "@chakra-ui/react";
-import { Grid, GridItem } from "@chakra-ui/react"
+import {Box, VStack} from "@chakra-ui/react";
+import { Grid } from "@chakra-ui/react"
 import {useRef} from "react";
-import SplitText from "./ui/SplitText";
 import ShinyText from './ui/ShinyText';
 import { Fade } from "react-awesome-reveal";
 
@@ -33,7 +32,7 @@ const GadgetsTab = () => {
                     speed={3}
                 />
                 <Grid templateColumns="repeat(2, 1fr)" gap={8}>
-                    {PcArray.map((item, index) => (
+                    {PcArray.map((item) => (
 
                         <EquipCard
                             id={item.id}
@@ -51,7 +50,7 @@ const GadgetsTab = () => {
                     speed={3}
                 />
                 <Grid templateColumns="repeat(2, 1fr)" gap={8}>
-                    {KeyboardArray.map((item, index) => (
+                    {KeyboardArray.map((item) => (
                         <EquipCard
                             id={item.id}
                             title={item.title}
@@ -69,7 +68,7 @@ const GadgetsTab = () => {
                     speed={3}
                 />
                 <Grid templateColumns="repeat(2, 1fr)" gap={8}>
-                    {CoffeeArray.map((item, index) => (
+                    {CoffeeArray.map((item) => (
                         <EquipCard
                             id={item.id}
                             title={item.title}

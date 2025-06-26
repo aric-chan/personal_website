@@ -1,6 +1,6 @@
-import React, {useEffect, useRef, useState} from 'react';
+import {useEffect, useState} from 'react';
 import {projectArray} from "@/assets/data/ProjectArray.ts";
-import {Box, Button, Flex, HStack, VStack} from "@chakra-ui/react";
+import {Box, Button, Flex, VStack} from "@chakra-ui/react";
 import ProjectCard from "@/components/ProjectCard.tsx";
 import { motion } from 'framer-motion';
 import { Fade } from 'react-awesome-reveal';
@@ -63,7 +63,7 @@ const filterTag = () => {
             </Flex>
                 <Fade>
             <VStack wrap="wrap" gap="6">
-                {filteredProjectArray.map((item, index) => (
+                {filteredProjectArray.map((item) => (
                     <ProjectCard
                         key = {item.id}
                         id={item.id}

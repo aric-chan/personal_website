@@ -1,14 +1,14 @@
 
-import budapest from "../../../public/gallery/budapest.jpg";
-import chimabirthday from "../../../public/gallery/chimabirthday.jpg";
-import harrypotter from "../../../public/gallery/harrypotter.jpg";
-import hkmaster from "../../../public/gallery/hkmaster.jpg";
-import joffrelakes from "../../../public/gallery/joffrelakes.jpg";
-import kinabalu from "../../../public/gallery/kinabalu.jpg";
-import kingcrab from "../../../public/gallery/kingcrab.jpg";
-import kyoto from "../../../public/gallery/kyoto.jpg";
-import wanchai from "../../../public/gallery/wanchai.jpg";
-import yellowleaf from "../../../public/gallery/yellowleaf.jpg";
+import budapest from "@/assets/gallery/budapest.jpg";
+import chimabirthday from "@/assets/gallery/chimabirthday.jpg";
+import harrypotter from "@/assets/gallery/harrypotter.jpg";
+import hkmaster from "@/assets/gallery/hkmaster.jpg";
+import joffrelakes from "@/assets/gallery/joffrelakes.jpg";
+import kinabalu from "@/assets/gallery/kinabalu.jpg";
+import kingcrab from "@/assets/gallery/kingcrab.jpg";
+import kyoto from "@/assets/gallery/kyoto.jpg";
+import wanchai from "@/assets/gallery/wanchai.jpg";
+import yellowleaf from "@/assets/gallery/yellowleaf.jpg";
 
  interface Gallery {
      id: number;

@@ -1,4 +1,4 @@
-import {Box, Flex, IconButton, Link, Tooltip} from "@chakra-ui/react";
+import {Box, Flex, IconButton, Link} from "@chakra-ui/react";
 import { IoDocumentTextOutline, IoMailOutline, IoLogoLinkedin, IoHome } from "react-icons/io5";
 const footer = () => {
 
@@ -15,7 +15,7 @@ const footer = () => {
                         <IoHome/>
                     </IconButton>
                 </Link>
-                <Link href="../../public/chan_aric_edbert_resume.pdf" target="_blank"
+                <Link href="../assets/chan_aric_edbert_resume.pdf" target="_blank"
                       rel="noopener noreferrer">
                     <IconButton size="xs"
                                 rounded="full"

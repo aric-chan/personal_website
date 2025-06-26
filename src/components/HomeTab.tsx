@@ -2,7 +2,7 @@ import {SlideShow} from "@/components/SlideShow.tsx";
 import Timeline from "@/components/TimeLine";
 import SplitText from "@/components/ui/SplitText.tsx";
 import {useRef} from "react";
-import {Box, Flex, Grid, HStack, VStack} from "@chakra-ui/react";
+import {Box, Flex, HStack, VStack} from "@chakra-ui/react";
 import {GalleryArray} from "@/assets/data/GalleryArray.ts";
 import Gallery from "@/components/Gallery.tsx";
 import {Fade} from "react-awesome-reveal";

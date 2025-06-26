@@ -31,7 +31,7 @@ function Card(props) {
         animate: { scale: 0.75, y: 30, opacity: 0.5 }
     };
 
-    function handleDragEnd(_, info) {
+    function handleDragEnd(_:any, info) {
         if (info.offset.x < -100) {
             setExitX(-250);
             props.setIndex(props.index + 1);

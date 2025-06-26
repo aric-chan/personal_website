@@ -1,10 +1,10 @@
-import birthday from "../../../public/chimaImages/birthday.jpg";
-import floor from "../../../public/chimaImages/floor.jpg";
-import flower from "../../../public/chimaImages/flower.jpg";
-import furball from "../../../public/chimaImages/furball.jpg";
-import profile from "../../../public/chimaImages/profile.jpg";
-import sleep from "../../../public/chimaImages/sleep.jpg";
-import snooker from "../../../public/chimaImages/snooker.jpg";
+import birthday from "@/assets/chimaImages/birthday.jpg";
+import floor from "@/assets/chimaImages/floor.jpg";
+import flower from "@/assets/chimaImages/flower.jpg";
+import furball from "@/assets/chimaImages/furball.jpg";
+import profile from "@/assets/chimaImages/profile.jpg";
+import sleep from "@/assets/chimaImages/sleep.jpg";
+import snooker from "@/assets/chimaImages/snooker.jpg";
 
 
 const ChiMaImages = [

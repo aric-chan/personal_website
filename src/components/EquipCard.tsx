@@ -1,4 +1,4 @@
-import { Card, Image, Text, HStack, Link } from "@chakra-ui/react"
+import { Card, Image, Text, Link } from "@chakra-ui/react"
 import { motion } from "framer-motion";
 
 interface EquipCardProps {
@@ -8,7 +8,7 @@ interface EquipCardProps {
     shopUrl: string;
     constraintsRef:any;
 }
-const EquipCard: React.FC<EquipCardProps> = ({id, title, imageSrc, shopUrl, constraintsRef})=> {
+const EquipCard: React.FC<EquipCardProps> = ({title, imageSrc, shopUrl, constraintsRef})=> {
     return (
         <motion.div
             drag = {true} // Explicitly enable dragging in both x and y
