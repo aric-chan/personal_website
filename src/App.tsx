@@ -11,7 +11,7 @@ import HomeTab from "@/components/HomeTab.tsx";
 export default function App() {
     return (
         <>
-            <BrowserRouter>
+            <BrowserRouter basename={import.meta.env.BASE_URL}>
                 <Box
                     position="fixed"
                     top={0}

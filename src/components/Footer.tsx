@@ -15,7 +15,7 @@ const footer = () => {
                         <IoHome/>
                     </IconButton>
                 </Link>
-                <Link href="../assets/chan_aric_edbert_resume.pdf" target="_blank"
+                <Link href="/assets/chan_aric_edbert_resume.pdf" target="_blank"
                       rel="noopener noreferrer">
                     <IconButton size="xs"
                                 rounded="full"
