@@ -12,4 +12,8 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  base: '/personal_website_ts/', // Matches GitHub Pages path
+  build: {
+    outDir: 'build', // Output to build/ instead of dist/
+  },
 })
