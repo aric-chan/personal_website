@@ -5,7 +5,7 @@ const footer = () => {
     return (
         <Box p={4}>
             <Flex justify="center" gap={6}>
-                <Link href="/">
+                <Link href="/personal_website/">
                     <IconButton
                         size="xs"
                         rounded="full"
@@ -15,7 +15,7 @@ const footer = () => {
                         <IoHome/>
                     </IconButton>
                 </Link>
-                <Link href="/assets/chan_aric_edbert_resume.pdf" target="_blank"
+                <Link href="/personal_website/assets/chan_aric_edbert_resume.pdf" target="_blank"
                       rel="noopener noreferrer">
                     <IconButton size="xs"
                                 rounded="full"

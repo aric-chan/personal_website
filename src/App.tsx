@@ -18,7 +18,7 @@ export default function App() {
                     left={0}
                     width="100vw"
                     height="100vh"
-                    zIndex={-1} // Put it behind other content
+                    zIndex={-1}
                     overflow="hidden"
 
                 >

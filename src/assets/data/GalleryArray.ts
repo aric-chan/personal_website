@@ -46,7 +46,7 @@ export const GalleryArray : Gallery[]  = [
     },
     {
         id: 3,
-        title: "2022 Hong Kong Masters",
+        title: "2022 HK Masters",
         description:  "Witness of 147 by Marco",
         imageSrc:hkmaster,
         rotate: 20,
@@ -56,7 +56,7 @@ export const GalleryArray : Gallery[]  = [
     {
         id: 4,
         title: "2023 Joffre Lake",
-        description:  "beautiful british columbia :)",
+        description:  "Beautiful british columbia :)",
         imageSrc:joffrelakes,
         rotate: -20,
         translate:"0% 10%"
@@ -73,7 +73,7 @@ export const GalleryArray : Gallery[]  = [
     ,
     {
         id: 6,
-        title: "Kyoto",
+        title: "2015 Kyoto",
         description:  "Took us 2 hours to wear kimono",
         imageSrc:kyoto,
         rotate: -10,
@@ -99,8 +99,8 @@ export const GalleryArray : Gallery[]  = [
     } ,
     {
         id: 9,
-        title: "2022 国営昭和記念公園",
-        description:  "ginkgo smell like vomit, do you know?",
+        title: "2022 Showa Memorial Park",
+        description:  "Ginkgo trees have a strong smell",
         imageSrc:yellowleaf,
         rotate: 20,
         translate:"-20% 130%"

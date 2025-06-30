@@ -26,8 +26,8 @@ const Gallery = ({ constraintsRef, title, description, imageSrc, rotate, transla
 
             >
 
-                <div className="flip-card">
-                    <div className="flip-card-inner">
+                <div className="flip-card grabbable">
+                    <div className="flip-card-inner ">
                         <div className="flip-card-front">
                             <Image
                                    width = "180px"
@@ -44,8 +44,6 @@ const Gallery = ({ constraintsRef, title, description, imageSrc, rotate, transla
                         </div>
                     </div>
                 </div>
-
-
 
             </motion.div>
         </Box>

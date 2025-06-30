@@ -61,7 +61,8 @@ function Card(props: CardProps) {
                 top: 0,
                 x,
                 rotate,
-                cursor: "grab"
+                cursor: "grab",
+
             }}
             whileTap={{ cursor: "grabbing" }}
             // Dragging
@@ -91,8 +92,9 @@ function Card(props: CardProps) {
                     borderRadius: 20,
                     scale,
                     pointerEvents: "none",
-                    objectFit: "cover"
+                    objectFit: "cover",
                 }}
+
             />
         </motion.div>
     );

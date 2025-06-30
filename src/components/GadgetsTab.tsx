@@ -19,7 +19,7 @@ const GadgetsTab = () => {
             position="relative"
             display="flex"
             alignItems="center"
-            justifyContent="center" // Center the card initially
+            justifyContent="center"
         >
 
             <VStack w="100vw">

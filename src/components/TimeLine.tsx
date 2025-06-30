@@ -1,12 +1,12 @@
 import {Fade} from "react-awesome-reveal";
-import {EventArray} from "@/assets/data/EventArray.ts";
+import {TimelineArray} from "@/assets/data/TimelineArray.ts";
 import type {IconType} from "react-icons";
 import { Icon, Timeline } from "@chakra-ui/react"
 
 
 interface EventProps {
     date: string;
-    icon: IconType; // Store the component type, not the rendered element
+    icon: IconType; // Store the component type
     title: string;
     description: string;
 }
@@ -37,8 +37,8 @@ const Event = ({event}: {event:EventProps}) => {
 const TimeLine = () => {
     return (
         <Fade>
-            <Timeline.Root maxWidth = "500px">
-                {EventArray.map((item,index) =>
+            <Timeline.Root translate="10%" maxWidth = "500px">
+                {TimelineArray.map((item, index) =>
                     <Event key = {index}
                            event = {item}
                     />

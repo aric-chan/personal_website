@@ -11,7 +11,7 @@ interface EventProps {
 }
 
 
-export const EventArray: EventProps[] = [
+export const TimelineArray: EventProps[] = [
     {
         date: "2024 - Current",
         icon: LuSchool,
